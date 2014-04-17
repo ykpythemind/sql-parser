@@ -5,9 +5,9 @@ module SQLParser
   
   require 'racc/parser'
 
-  require_relative 'sql/version'
-  require_relative 'sql/statement'
-  require_relative 'sql/sql_visitor'
-  require_relative 'sql/parser.racc.rb'
+  require_relative 'sql-parser/version'
+  require_relative 'sql-parser/statement'
+  require_relative 'sql-parser/sql_visitor'
+  require_relative 'sql-parser/parser.racc.rb'
 
 end

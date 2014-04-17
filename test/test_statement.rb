@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../lib/sql'
+require File.dirname(__FILE__) + '/../lib/sql-parser'
 require 'test/unit'
 
 class TestStatement < Test::Unit::TestCase
