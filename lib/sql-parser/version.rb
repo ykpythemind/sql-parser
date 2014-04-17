@@ -1,13 +1,5 @@
 module SQLParser
   
-  module VERSION
-    
-    MAJOR = 0
-    MINOR = 0
-    TINY  = 1
-
-    STRING = [MAJOR, MINOR, TINY].join('.')
-    
-  end
+  VERSION = '0.0.1'
   
 end
