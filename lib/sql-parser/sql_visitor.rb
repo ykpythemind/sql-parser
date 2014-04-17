@@ -1,5 +1,7 @@
-module SQL
+module SQLParser
+  
   class SQLVisitor
+    
     def initialize
       @negated = false
     end
@@ -343,5 +345,7 @@ module SQL
     def qualified_join(join_type, o)
       "#{visit(o.left)} #{join_type} JOIN #{visit(o.right)} #{visit(o.search_condition)}"
     end
+    
   end
+  
 end

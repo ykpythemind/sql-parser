@@ -1,8 +1,9 @@
-require 'date'
-
-module SQL
+module SQLParser
+  
   module Statement
+    
     class Node
+      
       def accept(visitor)
         klass = self.class.ancestors.find do |ancestor|
           visitor.respond_to?("visit_#{demodulize(ancestor.name)}")
@@ -24,9 +25,11 @@ module SQL
       def demodulize(str)
         str.split('::')[-1]
       end
+      
     end
 
     class DirectSelect < Node
+      
       def initialize(query_expression, order_by)
         @query_expression = query_expression
         @order_by = order_by
@@ -34,22 +37,27 @@ module SQL
 
       attr_reader :query_expression
       attr_reader :order_by
+      
     end
 
     class OrderBy < Node
+      
       def initialize(sort_specification)
         @sort_specification = Array(sort_specification)
       end
 
       attr_reader :sort_specification
+      
     end
 
     class Subquery < Node
+      
       def initialize(query_specification)
         @query_specification = query_specification
       end
 
       attr_reader :query_specification
+      
     end
 
     class Select < Node
@@ -60,28 +68,34 @@ module SQL
 
       attr_reader :list
       attr_reader :table_expression
+      
     end
 
     class SelectList < Node
+      
       def initialize(columns)
         @columns = Array(columns)
       end
 
       attr_reader :columns
+      
     end
 
     class Distinct < Node
+      
       def initialize(column)
         @column = column
       end
 
       attr_reader :column
+      
     end
 
     class All < Node
     end
 
     class TableExpression < Node
+      
       def initialize(from_clause, where_clause = nil, group_by_clause = nil, having_clause = nil)
         @from_clause = from_clause
         @where_clause = where_clause
@@ -93,30 +107,37 @@ module SQL
       attr_reader :where_clause
       attr_reader :group_by_clause
       attr_reader :having_clause
+      
     end
 
     class FromClause < Node
+      
       def initialize(tables)
         @tables = Array(tables)
       end
 
       attr_reader :tables
+      
     end
 
     class OrderClause < Node
+      
       def initialize(columns)
         @columns = Array(columns)
       end
 
       attr_reader :columns
+      
     end
 
     class OrderSpecification < Node
+      
       def initialize(column)
         @column = column
       end
 
       attr_reader :column
+      
     end
 
     class Ascending < OrderSpecification
@@ -126,38 +147,47 @@ module SQL
     end
 
     class HavingClause < Node
+      
       def initialize(search_condition)
         @search_condition = search_condition
       end
 
       attr_reader :search_condition
+      
     end
 
     class GroupByClause < Node
+      
       def initialize(columns)
         @columns = Array(columns)
       end
 
       attr_reader :columns
+      
     end
 
     class WhereClause < Node
+      
       def initialize(search_condition)
         @search_condition = search_condition
       end
 
       attr_reader :search_condition
+      
     end
 
     class On < Node
+      
       def initialize(search_condition)
         @search_condition = search_condition
       end
 
       attr_reader :search_condition
+      
     end
 
     class SearchCondition < Node
+      
       def initialize(left, right)
         @left = left
         @right = right
@@ -165,14 +195,17 @@ module SQL
 
       attr_reader :left
       attr_reader :right
+      
     end
 
     class Using < Node
+      
       def initialize(columns)
         @columns = Array(columns)
       end
 
       attr_reader :columns
+      
     end
 
     class Or < SearchCondition
@@ -182,14 +215,17 @@ module SQL
     end
 
     class Exists < Node
+      
       def initialize(table_subquery)
         @table_subquery = table_subquery
       end
 
       attr_reader :table_subquery
+      
     end
 
     class ComparisonPredicate < Node
+      
       def initialize(left, right)
         @left = left
         @right = right
@@ -197,6 +233,7 @@ module SQL
 
       attr_reader :left
       attr_reader :right
+      
     end
 
     class Is < ComparisonPredicate
@@ -209,14 +246,17 @@ module SQL
     end
 
     class InValueList < Node
+      
       def initialize(values)
         @values = values
       end
 
       attr_reader :values
+      
     end
 
     class Between < Node
+      
       def initialize(left, min, max)
         @left = left
         @min = min
@@ -226,6 +266,7 @@ module SQL
       attr_reader :left
       attr_reader :min
       attr_reader :max
+      
     end
 
     class GreaterOrEquals < ComparisonPredicate
@@ -244,11 +285,13 @@ module SQL
     end
 
     class Aggregate < Node
+      
       def initialize(column)
         @column = column
       end
 
       attr_reader :column
+      
     end
 
     class Sum < Aggregate
@@ -267,6 +310,7 @@ module SQL
     end
 
     class JoinedTable < Node
+      
       def initialize(left, right)
         @left = left
         @right = right
@@ -274,18 +318,21 @@ module SQL
 
       attr_reader :left
       attr_reader :right
+      
     end
 
     class CrossJoin < JoinedTable
     end
 
     class QualifiedJoin < JoinedTable
+      
       def initialize(left, right, search_condition)
         super(left, right)
         @search_condition = search_condition
       end
 
       attr_reader :search_condition
+      
     end
 
     class InnerJoin < QualifiedJoin
@@ -310,6 +357,7 @@ module SQL
     end
 
     class QualifiedColumn < Node
+      
       def initialize(table, column)
         @table = table
         @column = column
@@ -317,14 +365,17 @@ module SQL
 
       attr_reader :table
       attr_reader :column
+      
     end
 
     class Identifier < Node
+      
       def initialize(name)
         @name = name
       end
 
       attr_reader :name
+      
     end
 
     class Table < Identifier
@@ -334,6 +385,7 @@ module SQL
     end
 
     class As < Node
+      
       def initialize(value, column)
         @value = value
         @column = column
@@ -341,9 +393,11 @@ module SQL
 
       attr_reader :value
       attr_reader :column
+      
     end
 
     class Arithmetic < Node
+      
       def initialize(left, right)
         @left = left
         @right = right
@@ -351,6 +405,7 @@ module SQL
 
       attr_reader :left
       attr_reader :right
+      
     end
 
     class Multiply < Arithmetic
@@ -366,11 +421,13 @@ module SQL
     end
 
     class Unary < Node
+      
       def initialize(value)
         @value = value
       end
 
       attr_reader :value
+      
     end
 
     class Not < Unary
@@ -395,11 +452,13 @@ module SQL
     end
 
     class Literal < Node
+      
       def initialize(value)
         @value = value
       end
 
       attr_reader :value
+      
     end
 
     class DateTime < Literal
@@ -412,6 +471,7 @@ module SQL
     end
 
     class ApproximateFloat < Node
+      
       def initialize(mantissa, exponent)
         @mantissa = mantissa
         @exponent = exponent
@@ -419,6 +479,7 @@ module SQL
 
       attr_reader :mantissa
       attr_reader :exponent
+      
     end
 
     class Float < Literal
@@ -426,5 +487,6 @@ module SQL
 
     class Integer < Literal
     end
+    
   end
 end
