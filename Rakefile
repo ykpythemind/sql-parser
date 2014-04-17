@@ -1,5 +1,3 @@
-# -*- ruby -*-
-
 require 'rubygems'
 require 'hoe'
 require './lib/sql/version.rb'
@@ -26,5 +24,3 @@ Rake::Task['test'].prerequisites << :parser
 
 # Make sure the generated parser gets included in the manifest.
 Rake::Task['check_manifest'].prerequisites << :parser
-
-# vim: syntax=Ruby
