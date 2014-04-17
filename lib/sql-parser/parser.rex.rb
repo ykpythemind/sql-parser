@@ -236,6 +236,12 @@ class Parser < Racc::Parser
         when (text = ss.scan(/`\w+`/i))
            @rex_tokens.push action { [:identifier, text[1..-2]] }
 
+        when (text = ss.scan(/"\w+"/i))
+           @rex_tokens.push action { [:identifier, text[1..-2]] }
+
+        when (text = ss.scan(/'\w+'/i))
+           @rex_tokens.push action { [:identifier, text[1..-2]] }
+
         when (text = ss.scan(/\w+/i))
            @rex_tokens.push action { [:identifier, text] }
 

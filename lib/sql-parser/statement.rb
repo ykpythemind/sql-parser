@@ -268,6 +268,16 @@ module SQLParser
       attr_reader :values
       
     end
+    
+    class InColumnList < Node
+      
+      def initialize(columns)
+        @columns = columns
+      end
+
+      attr_reader :columns
+      
+    end
 
     class Between < Node
       
