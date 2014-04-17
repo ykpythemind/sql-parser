@@ -1,4 +1,4 @@
-class SQL::Parser
+class SQLParser::Parser
 
 option
   ignorecase

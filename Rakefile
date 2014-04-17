@@ -2,7 +2,7 @@ require 'rubygems'
 require 'hoe'
 require './lib/sql/version.rb'
 
-Hoe.new('sql', SQL::VERSION::STRING) do |p|
+Hoe.new('sql', SQLParser::VERSION::STRING) do |p|
   p.developer 'Dray Lacy', 'dray@izea.com'
 end
 
