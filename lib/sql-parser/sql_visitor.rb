@@ -137,6 +137,7 @@ module SQLParser
     end
 
     def visit_InValueList(o)
+      puts o.values.inspect
       "(#{arrayize(o.values)})"
     end
 

@@ -14,6 +14,10 @@ class TestParser < Test::Unit::TestCase
   def test_insert_into_clause
     assert_understands 'INSERT INTO `users` VALUES (1, 2)'
   end
+  
+  def test_insert_into_clause
+    assert_understands 'INSERT INTO `users` VALUES (`a`, `b`)'
+  end
 
   def test_case_insensitivity
     assert_sql 'SELECT * FROM `users` WHERE `id` = 1', 'select * from users where id = 1'

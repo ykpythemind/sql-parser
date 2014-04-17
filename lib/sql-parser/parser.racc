@@ -219,6 +219,7 @@ rule
 
   value_expression
     : numeric_value_expression
+    | general_literal
 
   numeric_value_expression
     : term plus_sign numeric_value_expression { result = SQLParser::Statement::Add.new(val[0], val[2]) }
