@@ -350,7 +350,7 @@ class TestParser < Test::Unit::TestCase
   private
 
   def assert_sql(expected, given)
-    assert_equal expected, SQL::Parser.parse(given).to_sql
+    assert_equal expected, SQLParser::Parser.parse(given).to_sql
   end
 
   def assert_understands(sql)
