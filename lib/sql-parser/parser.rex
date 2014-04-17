@@ -46,6 +46,8 @@ rule
             AND           { [:AND, text] }
             NOT           { [:NOT, text] }
             INNER         { [:INNER, text] }
+            INSERT        { [:INSERT, text] }
+            INTO          { [:INTO, text] }
             IN            { [:IN, text] }
             ORDER         { [:ORDER, text] }
             OR            { [:OR, text] }
@@ -71,6 +73,7 @@ rule
             EXISTS        { [:EXISTS, text] }
             DESC          { [:DESC, text] }
             CURRENT_USER  { [:CURRENT_USER, text] }
+            VALUES        { [:VALUES, text] }
 
 # tokens
             E             { [:E, text] }
