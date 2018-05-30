@@ -1,7 +1,6 @@
-require File.dirname(__FILE__) + '/../lib/sql-parser'
-require 'test/unit'
+require 'test_helper'
 
-class TestParser < Test::Unit::TestCase
+class TestParser < Minitest::Test
   def test_current_user
     assert_understands 'SELECT CURRENT_USER'
 
