@@ -23,10 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'racc', '1.4.14'
 
-  s.add_development_dependency 'rspec'
   s.add_development_dependency 'rexical'
-  s.add_development_dependency 'pry-byebug'
-
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'

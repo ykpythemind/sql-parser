@@ -14,16 +14,14 @@ class TestParser < Minitest::Test
     assert_understands 'INSERT INTO `users` VALUES (1, 2)'
   end
 
-  def test_insert_into_clause
+  def test_insert_into_clause2
     assert_understands 'INSERT INTO `users` VALUES (`a`, `b`)'
   end
 
   def test_insert_with_quotes
     q =  'INSERT INTO "users" ("active", "created_on", "email", "last_login", "password", "salt", "username") VALUES ("a", "b", "c", "c", "e")'
     q.gsub!(/([^\\])"/) { $1 + '`' }
-    puts q.inspect
     assert_understands q
-
   end
 
   def test_case_insensitivity
