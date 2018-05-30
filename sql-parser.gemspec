@@ -1,4 +1,4 @@
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sql-parser/version'
 
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'racc', '1.4.14'
 
   s.add_development_dependency 'rexical'
+  s.add_development_dependency 'awesome_print'
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'

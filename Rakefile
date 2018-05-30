@@ -1,11 +1,11 @@
 require_relative 'lib/sql-parser/version'
-require "bundler/gem_tasks"
-require "rake/testtask"
+require 'bundler/gem_tasks'
+require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'test'
   t.libs << 'lib'
-  t.test_files = FileList["test/**/*_test.rb"]
+  t.test_files = FileList['test/**/*_test.rb']
 end
 
 GENERATED_PARSER = 'lib/sql-parser/parser.racc.rb'
@@ -24,3 +24,4 @@ task :parser => [GENERATED_LEXER, GENERATED_PARSER]
 # Make sure the parser's up-to-date when we test.
 Rake::Task['test'].prerequisites << :parser
 task :default => :test
+
