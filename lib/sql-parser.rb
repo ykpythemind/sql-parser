@@ -1,8 +1,8 @@
 module SQLParser
-  
+
   require 'strscan'
   require 'date'
-  
+
   require 'racc/parser'
 
   require_relative 'sql-parser/version'

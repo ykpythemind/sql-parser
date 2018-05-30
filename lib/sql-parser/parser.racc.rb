@@ -727,7 +727,7 @@ Racc_debug_parser = false
 
 module_eval(<<'.,.,', 'parser.racc', 13)
   def _reduce_4(val, _values, result)
-     result = SQLParser::Statement::DirectSelect.new(val[0], val[1]) 
+     result = SQLParser::Statement::DirectSelect.new(val[0], val[1])
     result
   end
 .,.,
@@ -736,14 +736,14 @@ module_eval(<<'.,.,', 'parser.racc', 13)
 
 module_eval(<<'.,.,', 'parser.racc', 18)
   def _reduce_6(val, _values, result)
-     result = SQLParser::Statement::OrderBy.new(val[2]) 
+     result = SQLParser::Statement::OrderBy.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 21)
   def _reduce_7(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -752,7 +752,7 @@ module_eval(<<'.,.,', 'parser.racc', 21)
 
 module_eval(<<'.,.,', 'parser.racc', 25)
   def _reduce_9(val, _values, result)
-     result = val[1].new(val[0]) 
+     result = val[1].new(val[0])
     result
   end
 .,.,
@@ -761,35 +761,35 @@ module_eval(<<'.,.,', 'parser.racc', 25)
 
 module_eval(<<'.,.,', 'parser.racc', 29)
   def _reduce_11(val, _values, result)
-     result = SQLParser::Statement::Integer.new(val[0]) 
+     result = SQLParser::Statement::Integer.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 32)
   def _reduce_12(val, _values, result)
-     result = SQLParser::Statement::Ascending 
+     result = SQLParser::Statement::Ascending
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 33)
   def _reduce_13(val, _values, result)
-     result = SQLParser::Statement::Ascending 
+     result = SQLParser::Statement::Ascending
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 34)
   def _reduce_14(val, _values, result)
-     result = SQLParser::Statement::Descending 
+     result = SQLParser::Statement::Descending
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 39)
   def _reduce_15(val, _values, result)
-     result = SQLParser::Statement::Subquery.new(val[1]) 
+     result = SQLParser::Statement::Subquery.new(val[1])
     result
   end
 .,.,
@@ -798,28 +798,28 @@ module_eval(<<'.,.,', 'parser.racc', 39)
 
 module_eval(<<'.,.,', 'parser.racc', 45)
   def _reduce_17(val, _values, result)
-     result = SQLParser::Statement::Insert.new(val[2], nil, val[3]) 
+     result = SQLParser::Statement::Insert.new(val[2], nil, val[3])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 46)
   def _reduce_18(val, _values, result)
-     result = SQLParser::Statement::Insert.new(val[2], val[3], val[4]) 
+     result = SQLParser::Statement::Insert.new(val[2], val[3], val[4])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 49)
   def _reduce_19(val, _values, result)
-     result = SQLParser::Statement::InColumnList.new(val[1]) 
+     result = SQLParser::Statement::InColumnList.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 52)
   def _reduce_20(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -828,42 +828,42 @@ module_eval(<<'.,.,', 'parser.racc', 52)
 
 module_eval(<<'.,.,', 'parser.racc', 56)
   def _reduce_22(val, _values, result)
-     result = SQLParser::Statement::InValueList.new(val[2]) 
+     result = SQLParser::Statement::InValueList.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 59)
   def _reduce_23(val, _values, result)
-     result = SQLParser::Statement::Select.new(val[1], val[2]) 
+     result = SQLParser::Statement::Select.new(val[1], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 60)
   def _reduce_24(val, _values, result)
-     result = SQLParser::Statement::Select.new(val[1]) 
+     result = SQLParser::Statement::Select.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 63)
   def _reduce_25(val, _values, result)
-     result = SQLParser::Statement::All.new 
+     result = SQLParser::Statement::All.new
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 64)
   def _reduce_26(val, _values, result)
-     result = SQLParser::Statement::SelectList.new(val[0]) 
+     result = SQLParser::Statement::SelectList.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 67)
   def _reduce_27(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -872,14 +872,14 @@ module_eval(<<'.,.,', 'parser.racc', 67)
 
 module_eval(<<'.,.,', 'parser.racc', 71)
   def _reduce_29(val, _values, result)
-     result = SQLParser::Statement::As.new(val[0], val[2]) 
+     result = SQLParser::Statement::As.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 72)
   def _reduce_30(val, _values, result)
-     result = SQLParser::Statement::As.new(val[0], val[1]) 
+     result = SQLParser::Statement::As.new(val[0], val[1])
     result
   end
 .,.,
@@ -888,28 +888,28 @@ module_eval(<<'.,.,', 'parser.racc', 72)
 
 module_eval(<<'.,.,', 'parser.racc', 76)
   def _reduce_32(val, _values, result)
-     result = SQLParser::Statement::TableExpression.new(val[0], val[1], val[2], val[3]) 
+     result = SQLParser::Statement::TableExpression.new(val[0], val[1], val[2], val[3])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 79)
   def _reduce_33(val, _values, result)
-     result = SQLParser::Statement::FromClause.new(val[1]) 
+     result = SQLParser::Statement::FromClause.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 82)
   def _reduce_34(val, _values, result)
-     result = SQLParser::Statement::As.new(val[0], val[2]) 
+     result = SQLParser::Statement::As.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 83)
   def _reduce_35(val, _values, result)
-     result = SQLParser::Statement::As.new(val[0], val[1]) 
+     result = SQLParser::Statement::As.new(val[0], val[1])
     result
   end
 .,.,
@@ -926,70 +926,70 @@ module_eval(<<'.,.,', 'parser.racc', 83)
 
 module_eval(<<'.,.,', 'parser.racc', 95)
   def _reduce_41(val, _values, result)
-     result = SQLParser::Statement::CrossJoin.new(val[0], val[2]) 
+     result = SQLParser::Statement::CrossJoin.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 96)
   def _reduce_42(val, _values, result)
-     result = SQLParser::Statement::CrossJoin.new(val[0], val[3]) 
+     result = SQLParser::Statement::CrossJoin.new(val[0], val[3])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 99)
   def _reduce_43(val, _values, result)
-     result = val[1].new(val[0], val[3], val[4]) 
+     result = val[1].new(val[0], val[3], val[4])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 102)
   def _reduce_44(val, _values, result)
-     result = SQLParser::Statement::InnerJoin 
+     result = SQLParser::Statement::InnerJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 103)
   def _reduce_45(val, _values, result)
-     result = SQLParser::Statement::LeftOuterJoin 
+     result = SQLParser::Statement::LeftOuterJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 104)
   def _reduce_46(val, _values, result)
-     result = SQLParser::Statement::LeftJoin 
+     result = SQLParser::Statement::LeftJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 105)
   def _reduce_47(val, _values, result)
-     result = SQLParser::Statement::RightOuterJoin 
+     result = SQLParser::Statement::RightOuterJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 106)
   def _reduce_48(val, _values, result)
-     result = SQLParser::Statement::RightJoin 
+     result = SQLParser::Statement::RightJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 107)
   def _reduce_49(val, _values, result)
-     result = SQLParser::Statement::FullJoin 
+     result = SQLParser::Statement::FullJoin
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 108)
   def _reduce_50(val, _values, result)
-     result = SQLParser::Statement::FullOuterJoin 
+     result = SQLParser::Statement::FullOuterJoin
     result
   end
 .,.,
@@ -1000,14 +1000,14 @@ module_eval(<<'.,.,', 'parser.racc', 108)
 
 module_eval(<<'.,.,', 'parser.racc', 115)
   def _reduce_53(val, _values, result)
-     result = SQLParser::Statement::On.new(val[1]) 
+     result = SQLParser::Statement::On.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 118)
   def _reduce_54(val, _values, result)
-     result = SQLParser::Statement::Using.new(val[2]) 
+     result = SQLParser::Statement::Using.new(val[2])
     result
   end
 .,.,
@@ -1018,7 +1018,7 @@ module_eval(<<'.,.,', 'parser.racc', 118)
 
 module_eval(<<'.,.,', 'parser.racc', 125)
   def _reduce_57(val, _values, result)
-     result = SQLParser::Statement::WhereClause.new(val[1]) 
+     result = SQLParser::Statement::WhereClause.new(val[1])
     result
   end
 .,.,
@@ -1027,14 +1027,14 @@ module_eval(<<'.,.,', 'parser.racc', 125)
 
 module_eval(<<'.,.,', 'parser.racc', 129)
   def _reduce_59(val, _values, result)
-     result = SQLParser::Statement::GroupByClause.new(val[2]) 
+     result = SQLParser::Statement::GroupByClause.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 132)
   def _reduce_60(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -1047,7 +1047,7 @@ module_eval(<<'.,.,', 'parser.racc', 132)
 
 module_eval(<<'.,.,', 'parser.racc', 140)
   def _reduce_64(val, _values, result)
-     result = SQLParser::Statement::HavingClause.new(val[1]) 
+     result = SQLParser::Statement::HavingClause.new(val[1])
     result
   end
 .,.,
@@ -1056,28 +1056,28 @@ module_eval(<<'.,.,', 'parser.racc', 140)
 
 module_eval(<<'.,.,', 'parser.racc', 147)
   def _reduce_66(val, _values, result)
-     result = SQLParser::Statement::Not.new(SQLParser::Statement::Between.new(val[0], val[3], val[5])) 
+     result = SQLParser::Statement::Not.new(SQLParser::Statement::Between.new(val[0], val[3], val[5]))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 148)
   def _reduce_67(val, _values, result)
-     result = SQLParser::Statement::Between.new(val[0], val[2], val[4]) 
+     result = SQLParser::Statement::Between.new(val[0], val[2], val[4])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 151)
   def _reduce_68(val, _values, result)
-     result = SQLParser::Statement::Not.new(SQLParser::Statement::In.new(val[0], val[3])) 
+     result = SQLParser::Statement::Not.new(SQLParser::Statement::In.new(val[0], val[3]))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 152)
   def _reduce_69(val, _values, result)
-     result = SQLParser::Statement::In.new(val[0], val[2]) 
+     result = SQLParser::Statement::In.new(val[0], val[2])
     result
   end
 .,.,
@@ -1086,14 +1086,14 @@ module_eval(<<'.,.,', 'parser.racc', 152)
 
 module_eval(<<'.,.,', 'parser.racc', 156)
   def _reduce_71(val, _values, result)
-     result = SQLParser::Statement::InValueList.new(val[1]) 
+     result = SQLParser::Statement::InValueList.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 159)
   def _reduce_72(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -1102,49 +1102,49 @@ module_eval(<<'.,.,', 'parser.racc', 159)
 
 module_eval(<<'.,.,', 'parser.racc', 166)
   def _reduce_74(val, _values, result)
-     result = SQLParser::Statement::Not.new(SQLParser::Statement::Like.new(val[0], val[3])) 
+     result = SQLParser::Statement::Not.new(SQLParser::Statement::Like.new(val[0], val[3]))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 167)
   def _reduce_75(val, _values, result)
-     result = SQLParser::Statement::Like.new(val[0], val[2]) 
+     result = SQLParser::Statement::Like.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 170)
   def _reduce_76(val, _values, result)
-     result = SQLParser::Statement::Not.new(SQLParser::Statement::Is.new(val[0], SQLParser::Statement::Null.new)) 
+     result = SQLParser::Statement::Not.new(SQLParser::Statement::Is.new(val[0], SQLParser::Statement::Null.new))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 171)
   def _reduce_77(val, _values, result)
-     result = SQLParser::Statement::Is.new(val[0], SQLParser::Statement::Null.new) 
+     result = SQLParser::Statement::Is.new(val[0], SQLParser::Statement::Null.new)
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 174)
   def _reduce_78(val, _values, result)
-     result = SQLParser::Statement::Exists.new(val[1]) 
+     result = SQLParser::Statement::Exists.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 178)
   def _reduce_79(val, _values, result)
-     result = SQLParser::Statement::Table.new(val[0]) 
+     result = SQLParser::Statement::Table.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 181)
   def _reduce_80(val, _values, result)
-     result = Array(val[0]) + Array(val[2]) 
+     result = Array(val[0]) + Array(val[2])
     result
   end
 .,.,
@@ -1155,7 +1155,7 @@ module_eval(<<'.,.,', 'parser.racc', 181)
 
 module_eval(<<'.,.,', 'parser.racc', 187)
   def _reduce_83(val, _values, result)
-     result = SQLParser::Statement::Or.new(val[0], val[2]) 
+     result = SQLParser::Statement::Or.new(val[0], val[2])
     result
   end
 .,.,
@@ -1164,14 +1164,14 @@ module_eval(<<'.,.,', 'parser.racc', 187)
 
 module_eval(<<'.,.,', 'parser.racc', 191)
   def _reduce_85(val, _values, result)
-     result = SQLParser::Statement::And.new(val[0], val[2]) 
+     result = SQLParser::Statement::And.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 194)
   def _reduce_86(val, _values, result)
-     result = SQLParser::Statement::Not.new(val[1]) 
+     result = SQLParser::Statement::Not.new(val[1])
     result
   end
 .,.,
@@ -1184,7 +1184,7 @@ module_eval(<<'.,.,', 'parser.racc', 194)
 
 module_eval(<<'.,.,', 'parser.racc', 202)
   def _reduce_90(val, _values, result)
-     result = val[1] 
+     result = val[1]
     result
   end
 .,.,
@@ -1203,42 +1203,42 @@ module_eval(<<'.,.,', 'parser.racc', 202)
 
 module_eval(<<'.,.,', 'parser.racc', 213)
   def _reduce_97(val, _values, result)
-     result = SQLParser::Statement::Equals.new(val[0], val[2]) 
+     result = SQLParser::Statement::Equals.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 214)
   def _reduce_98(val, _values, result)
-     result = SQLParser::Statement::Not.new(SQLParser::Statement::Equals.new(val[0], val[2])) 
+     result = SQLParser::Statement::Not.new(SQLParser::Statement::Equals.new(val[0], val[2]))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 215)
   def _reduce_99(val, _values, result)
-     result = SQLParser::Statement::Less.new(val[0], val[2]) 
+     result = SQLParser::Statement::Less.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 216)
   def _reduce_100(val, _values, result)
-     result = SQLParser::Statement::Greater.new(val[0], val[2]) 
+     result = SQLParser::Statement::Greater.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 217)
   def _reduce_101(val, _values, result)
-     result = SQLParser::Statement::LessOrEquals.new(val[0], val[2]) 
+     result = SQLParser::Statement::LessOrEquals.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 218)
   def _reduce_102(val, _values, result)
-     result = SQLParser::Statement::GreaterOrEquals.new(val[0], val[2]) 
+     result = SQLParser::Statement::GreaterOrEquals.new(val[0], val[2])
     result
   end
 .,.,
@@ -1255,14 +1255,14 @@ module_eval(<<'.,.,', 'parser.racc', 218)
 
 module_eval(<<'.,.,', 'parser.racc', 232)
   def _reduce_108(val, _values, result)
-     result = SQLParser::Statement::Add.new(val[0], val[2]) 
+     result = SQLParser::Statement::Add.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 233)
   def _reduce_109(val, _values, result)
-     result = SQLParser::Statement::Subtract.new(val[0], val[2]) 
+     result = SQLParser::Statement::Subtract.new(val[0], val[2])
     result
   end
 .,.,
@@ -1271,14 +1271,14 @@ module_eval(<<'.,.,', 'parser.racc', 233)
 
 module_eval(<<'.,.,', 'parser.racc', 237)
   def _reduce_111(val, _values, result)
-     result = SQLParser::Statement::Multiply.new(val[0], val[2]) 
+     result = SQLParser::Statement::Multiply.new(val[0], val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 238)
   def _reduce_112(val, _values, result)
-     result = SQLParser::Statement::Divide.new(val[0], val[2]) 
+     result = SQLParser::Statement::Divide.new(val[0], val[2])
     result
   end
 .,.,
@@ -1287,7 +1287,7 @@ module_eval(<<'.,.,', 'parser.racc', 238)
 
 module_eval(<<'.,.,', 'parser.racc', 242)
   def _reduce_114(val, _values, result)
-     result = val[0].new(val[1]) 
+     result = val[0].new(val[1])
     result
   end
 .,.,
@@ -1302,7 +1302,7 @@ module_eval(<<'.,.,', 'parser.racc', 242)
 
 module_eval(<<'.,.,', 'parser.racc', 249)
   def _reduce_119(val, _values, result)
-     result = val[1] 
+     result = val[1]
     result
   end
 .,.,
@@ -1317,14 +1317,14 @@ module_eval(<<'.,.,', 'parser.racc', 249)
 
 module_eval(<<'.,.,', 'parser.racc', 260)
   def _reduce_124(val, _values, result)
-     result = SQLParser::Statement::CurrentUser.new 
+     result = SQLParser::Statement::CurrentUser.new
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 263)
   def _reduce_125(val, _values, result)
-     result = SQLParser::Statement::QualifiedColumn.new(val[0], val[2]) 
+     result = SQLParser::Statement::QualifiedColumn.new(val[0], val[2])
     result
   end
 .,.,
@@ -1335,7 +1335,7 @@ module_eval(<<'.,.,', 'parser.racc', 263)
 
 module_eval(<<'.,.,', 'parser.racc', 270)
   def _reduce_128(val, _values, result)
-     result = SQLParser::Statement::Count.new(SQLParser::Statement::All.new) 
+     result = SQLParser::Statement::Count.new(SQLParser::Statement::All.new)
     result
   end
 .,.,
@@ -1344,35 +1344,35 @@ module_eval(<<'.,.,', 'parser.racc', 270)
 
 module_eval(<<'.,.,', 'parser.racc', 274)
   def _reduce_130(val, _values, result)
-     result = SQLParser::Statement::Count.new(val[2]) 
+     result = SQLParser::Statement::Count.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 275)
   def _reduce_131(val, _values, result)
-     result = SQLParser::Statement::Average.new(val[2]) 
+     result = SQLParser::Statement::Average.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 276)
   def _reduce_132(val, _values, result)
-     result = SQLParser::Statement::Maximum.new(val[2]) 
+     result = SQLParser::Statement::Maximum.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 277)
   def _reduce_133(val, _values, result)
-     result = SQLParser::Statement::Minimum.new(val[2]) 
+     result = SQLParser::Statement::Minimum.new(val[2])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 278)
   def _reduce_134(val, _values, result)
-     result = SQLParser::Statement::Sum.new(val[2]) 
+     result = SQLParser::Statement::Sum.new(val[2])
     result
   end
 .,.,
@@ -1383,35 +1383,35 @@ module_eval(<<'.,.,', 'parser.racc', 278)
 
 module_eval(<<'.,.,', 'parser.racc', 286)
   def _reduce_137(val, _values, result)
-     result = SQLParser::Statement::Float.new("#{val[0]}.#{val[2]}".to_f) 
+     result = SQLParser::Statement::Float.new("#{val[0]}.#{val[2]}".to_f)
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 287)
   def _reduce_138(val, _values, result)
-     result = SQLParser::Statement::Float.new(val[0]) 
+     result = SQLParser::Statement::Float.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 288)
   def _reduce_139(val, _values, result)
-     result = SQLParser::Statement::Float.new("0.#{val[1]}".to_f) 
+     result = SQLParser::Statement::Float.new("0.#{val[1]}".to_f)
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 289)
   def _reduce_140(val, _values, result)
-     result = SQLParser::Statement::Integer.new(val[0]) 
+     result = SQLParser::Statement::Integer.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 292)
   def _reduce_141(val, _values, result)
-     result = SQLParser::Statement::ApproximateFloat.new(val[0], val[2]) 
+     result = SQLParser::Statement::ApproximateFloat.new(val[0], val[2])
     result
   end
 .,.,
@@ -1422,49 +1422,49 @@ module_eval(<<'.,.,', 'parser.racc', 292)
 
 module_eval(<<'.,.,', 'parser.racc', 301)
   def _reduce_144(val, _values, result)
-     result = val[0].new(SQLParser::Statement::Integer.new(val[1])) 
+     result = val[0].new(SQLParser::Statement::Integer.new(val[1]))
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 302)
   def _reduce_145(val, _values, result)
-     result = SQLParser::Statement::Integer.new(val[0]) 
+     result = SQLParser::Statement::Integer.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 305)
   def _reduce_146(val, _values, result)
-     result = SQLParser::Statement::UnaryPlus 
+     result = SQLParser::Statement::UnaryPlus
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 306)
   def _reduce_147(val, _values, result)
-     result = SQLParser::Statement::UnaryMinus 
+     result = SQLParser::Statement::UnaryMinus
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 310)
   def _reduce_148(val, _values, result)
-     result = SQLParser::Statement::Column.new(val[0]) 
+     result = SQLParser::Statement::Column.new(val[0])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 314)
   def _reduce_149(val, _values, result)
-     result = SQLParser::Statement::String.new(val[1]) 
+     result = SQLParser::Statement::String.new(val[1])
     result
   end
 .,.,
 
 module_eval(<<'.,.,', 'parser.racc', 315)
   def _reduce_150(val, _values, result)
-     result = SQLParser::Statement::String.new('') 
+     result = SQLParser::Statement::String.new('')
     result
   end
 .,.,
@@ -1475,7 +1475,7 @@ module_eval(<<'.,.,', 'parser.racc', 315)
 
 module_eval(<<'.,.,', 'parser.racc', 322)
   def _reduce_153(val, _values, result)
-     result = SQLParser::Statement::Date.new(val[1]) 
+     result = SQLParser::Statement::Date.new(val[1])
     result
   end
 .,.,
