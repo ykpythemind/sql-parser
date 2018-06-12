@@ -36,9 +36,9 @@ module SQLParser
         @in_value_list = in_value_list
       end
 
-      attr_reader :table_reference
-      attr_reader :column_list
-      attr_reader :in_value_list
+      attr_accessor :table_reference
+      attr_accessor :column_list
+      attr_accessor :in_value_list
 
     end
 
@@ -49,8 +49,8 @@ module SQLParser
         @order_by = order_by
       end
 
-      attr_reader :query_expression
-      attr_reader :order_by
+      attr_accessor :query_expression
+      attr_accessor :order_by
 
     end
 
@@ -60,7 +60,7 @@ module SQLParser
         @sort_specification = Array(sort_specification)
       end
 
-      attr_reader :sort_specification
+      attr_accessor :sort_specification
 
     end
 
@@ -70,7 +70,7 @@ module SQLParser
         @query_specification = query_specification
       end
 
-      attr_reader :query_specification
+      attr_accessor :query_specification
 
     end
 
@@ -80,8 +80,8 @@ module SQLParser
         @table_expression = table_expression
       end
 
-      attr_reader :list
-      attr_reader :table_expression
+      attr_accessor :list
+      attr_accessor :table_expression
 
     end
 
@@ -91,7 +91,7 @@ module SQLParser
         @columns = Array(columns)
       end
 
-      attr_reader :columns
+      attr_accessor :columns
 
     end
 
@@ -101,7 +101,7 @@ module SQLParser
         @column = column
       end
 
-      attr_reader :column
+      attr_accessor :column
 
     end
 
@@ -118,11 +118,11 @@ module SQLParser
         @limit_clause = limit_clause
       end
 
-      attr_reader :from_clause
-      attr_reader :where_clause
-      attr_reader :group_by_clause
-      attr_reader :having_clause
-      attr_reader :limit_clause
+      attr_accessor :from_clause
+      attr_accessor :where_clause
+      attr_accessor :group_by_clause
+      attr_accessor :having_clause
+      attr_accessor :limit_clause
 
     end
 
@@ -132,7 +132,7 @@ module SQLParser
         @tables = Array(tables)
       end
 
-      attr_reader :tables
+      attr_accessor :tables
 
     end
 
@@ -142,7 +142,7 @@ module SQLParser
         @columns = Array(columns)
       end
 
-      attr_reader :columns
+      attr_accessor :columns
 
     end
 
@@ -152,7 +152,7 @@ module SQLParser
         @column = column
       end
 
-      attr_reader :column
+      attr_accessor :column
 
     end
 
@@ -168,7 +168,7 @@ module SQLParser
         @search_condition = search_condition
       end
 
-      attr_reader :search_condition
+      attr_accessor :search_condition
 
     end
 
@@ -178,7 +178,7 @@ module SQLParser
         @columns = Array(columns)
       end
 
-      attr_reader :columns
+      attr_accessor :columns
 
     end
 
@@ -188,7 +188,7 @@ module SQLParser
         @search_condition = search_condition
       end
 
-      attr_reader :search_condition
+      attr_accessor :search_condition
 
     end
 
@@ -198,7 +198,7 @@ module SQLParser
         @limit = limit
       end
 
-      attr_reader :limit
+      attr_accessor :limit
 
     end
 
@@ -208,7 +208,7 @@ module SQLParser
         @search_condition = search_condition
       end
 
-      attr_reader :search_condition
+      attr_accessor :search_condition
 
     end
 
@@ -219,8 +219,8 @@ module SQLParser
         @right = right
       end
 
-      attr_reader :left
-      attr_reader :right
+      attr_accessor :left
+      attr_accessor :right
 
     end
 
@@ -230,7 +230,7 @@ module SQLParser
         @columns = Array(columns)
       end
 
-      attr_reader :columns
+      attr_accessor :columns
 
     end
 
@@ -246,7 +246,7 @@ module SQLParser
         @table_subquery = table_subquery
       end
 
-      attr_reader :table_subquery
+      attr_accessor :table_subquery
 
     end
 
@@ -257,8 +257,8 @@ module SQLParser
         @right = right
       end
 
-      attr_reader :left
-      attr_reader :right
+      attr_accessor :left
+      attr_accessor :right
 
     end
 
@@ -277,7 +277,7 @@ module SQLParser
         @values = values
       end
 
-      attr_reader :values
+      attr_accessor :values
 
     end
 
@@ -287,7 +287,7 @@ module SQLParser
         @columns = columns
       end
 
-      attr_reader :columns
+      attr_accessor :columns
 
     end
 
@@ -299,9 +299,9 @@ module SQLParser
         @max = max
       end
 
-      attr_reader :left
-      attr_reader :min
-      attr_reader :max
+      attr_accessor :left
+      attr_accessor :min
+      attr_accessor :max
 
     end
 
@@ -326,7 +326,7 @@ module SQLParser
         @column = column
       end
 
-      attr_reader :column
+      attr_accessor :column
 
     end
 
@@ -352,8 +352,8 @@ module SQLParser
         @right = right
       end
 
-      attr_reader :left
-      attr_reader :right
+      attr_accessor :left
+      attr_accessor :right
 
     end
 
@@ -367,7 +367,7 @@ module SQLParser
         @search_condition = search_condition
       end
 
-      attr_reader :search_condition
+      attr_accessor :search_condition
 
     end
 
@@ -399,8 +399,8 @@ module SQLParser
         @column = column
       end
 
-      attr_reader :table
-      attr_reader :column
+      attr_accessor :table
+      attr_accessor :column
 
     end
 
@@ -410,7 +410,7 @@ module SQLParser
         @name = name
       end
 
-      attr_reader :name
+      attr_accessor :name
 
     end
 
@@ -427,8 +427,8 @@ module SQLParser
         @column = column
       end
 
-      attr_reader :value
-      attr_reader :column
+      attr_accessor :value
+      attr_accessor :column
 
     end
 
@@ -439,8 +439,8 @@ module SQLParser
         @right = right
       end
 
-      attr_reader :left
-      attr_reader :right
+      attr_accessor :left
+      attr_accessor :right
 
     end
 
@@ -462,7 +462,7 @@ module SQLParser
         @value = value
       end
 
-      attr_reader :value
+      attr_accessor :value
 
     end
 
@@ -493,7 +493,7 @@ module SQLParser
         @value = value
       end
 
-      attr_reader :value
+      attr_accessor :value
 
     end
 
@@ -513,8 +513,8 @@ module SQLParser
         @exponent = exponent
       end
 
-      attr_reader :mantissa
-      attr_reader :exponent
+      attr_accessor :mantissa
+      attr_accessor :exponent
 
     end
 
