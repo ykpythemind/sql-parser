@@ -1,5 +1,5 @@
 module SQLParser
 
-  VERSION = '0.3.0.fst'
+  VERSION = '0.4.0.fst'
 
 end
