@@ -35,6 +35,10 @@ class TestStatement < Minitest::Test
     assert_sql 'FROM `users` WHERE `id` = 1 GROUP BY `name`', tblx(from(tbl('users')), where(equals(col('id'), int(1))), group_by(col('name')))
   end
 
+  def test_limit
+    assert_sql 'FROM `users` LIMIT 2', tblx(from(tbl('users')), limit(int(2)))
+  end
+
   def test_from_clause
     assert_sql 'FROM `users`', from(tbl('users'))
   end
@@ -318,5 +322,9 @@ class TestStatement < Minitest::Test
 
   def group_by(columns)
     SQLParser::Statement::GroupByClause.new(columns)
+  end
+
+  def limit(limit)
+    SQLParser::Statement::LimitClause.new(limit)
   end
 end

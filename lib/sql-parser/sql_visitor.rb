@@ -56,7 +56,8 @@ module SQLParser
         o.from_clause,
         o.where_clause,
         o.group_by_clause,
-        o.having_clause
+        o.having_clause,
+        o.limit_clause
       ].compact.collect { |e| visit(e) }.join(' ')
     end
 
@@ -86,6 +87,10 @@ module SQLParser
 
     def visit_WhereClause(o)
       "WHERE #{visit(o.search_condition)}"
+    end
+
+    def visit_LimitClause(o)
+      "LIMIT #{visit(o.limit)}"
     end
 
     def visit_On(o)

@@ -110,17 +110,19 @@ module SQLParser
 
     class TableExpression < Node
 
-      def initialize(from_clause, where_clause = nil, group_by_clause = nil, having_clause = nil)
+      def initialize(from_clause, where_clause = nil, group_by_clause = nil, having_clause = nil, limit_clause = nil)
         @from_clause = from_clause
         @where_clause = where_clause
         @group_by_clause = group_by_clause
         @having_clause = having_clause
+        @limit_clause = limit_clause
       end
 
       attr_reader :from_clause
       attr_reader :where_clause
       attr_reader :group_by_clause
       attr_reader :having_clause
+      attr_reader :limit_clause
 
     end
 
@@ -187,6 +189,16 @@ module SQLParser
       end
 
       attr_reader :search_condition
+
+    end
+
+    class LimitClause < Node
+
+      def initialize(limit)
+        @limit = limit
+      end
+
+      attr_reader :limit
 
     end
 

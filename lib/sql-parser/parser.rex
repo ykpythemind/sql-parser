@@ -62,6 +62,7 @@ rule
             GROUP         { [:GROUP, text] }
             BY            { [:BY, text] }
             HAVING        { [:HAVING, text] }
+            LIMIT         { [:LIMIT, text] }
             CROSS         { [:CROSS, text] }
             JOIN          { [:JOIN, text] }
             ON            { [:ON, text] }

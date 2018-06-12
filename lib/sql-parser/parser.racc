@@ -74,7 +74,7 @@ rule
     | value_expression
 
   table_expression
-    : from_clause where_clause group_by_clause having_clause { result = SQLParser::Statement::TableExpression.new(val[0], val[1], val[2], val[3]) }
+    : from_clause where_clause group_by_clause having_clause limit_clause { result = SQLParser::Statement::TableExpression.new(val[0], val[1], val[2], val[3], val[4]) }
 
   from_clause
     : FROM table_reference { result = SQLParser::Statement::FromClause.new(val[1]) }
@@ -139,6 +139,10 @@ rule
   having_clause
     : # no action
     | HAVING search_condition { result = SQLParser::Statement::HavingClause.new(val[1]) }
+
+  limit_clause
+    : # no action
+    | LIMIT unsigned_integer { result = SQLParser::Statement::LimitClause.new(SQLParser::Statement::Integer.new(val[1])) }
 
 # query expression components
   row_subquery
