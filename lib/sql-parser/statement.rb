@@ -415,6 +415,11 @@ module SQLParser
     end
 
     class Table < Identifier
+      def initialize(*names)
+        @names = names
+      end
+
+      attr_accessor :names
     end
 
     class Column < Identifier

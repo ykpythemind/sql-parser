@@ -84,6 +84,7 @@ rule
     | table_name column_name { result = SQLParser::Statement::As.new(val[0], val[1]) }
     | table_name
     | joined_table
+    | identifier period identifier { result = SQLParser::Statement::Table.new(val[0], val[2]) }
 
   table_subquery
     : subquery

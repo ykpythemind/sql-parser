@@ -42,6 +42,10 @@ class TestParser < Minitest::Test
     assert_understands 'SELECT * FROM `users` ORDER BY 1 DESC'
   end
 
+  def test_qualified_table
+    assert_understands 'SELECT * FROM `foo`.`bar`'
+  end
+
   def test_order
     assert_sql 'SELECT * FROM `users` ORDER BY `name` ASC', 'SELECT * FROM users ORDER BY name'
     assert_understands 'SELECT * FROM `users` ORDER BY `name` ASC'

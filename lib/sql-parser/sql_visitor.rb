@@ -234,7 +234,7 @@ module SQLParser
     end
 
     def visit_Table(o)
-      quote(o.name)
+      o.names.map { |p| quote(p) }.join('.')
     end
 
     def visit_QualifiedColumn(o)
