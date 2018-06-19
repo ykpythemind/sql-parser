@@ -51,7 +51,7 @@ rule
 
   in_column_list
     : value_expression comma in_column_list { result = Array(val[0]) + Array(val[2]) }
-	  | value_expression
+    | value_expression
 
   value_list
     : VALUES left_paren in_value_list right_paren { result = SQLParser::Statement::InValueList.new(val[2]) }
@@ -298,7 +298,7 @@ rule
     : mantissa E exponent { result = SQLParser::Statement::ApproximateFloat.new(val[0], val[2]) }
 
   mantissa
-    : exact_numeric_literal
+    : signed_integer
 
   exponent
     : signed_integer
