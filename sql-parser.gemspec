@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'racc', '1.4.14'
+  s.add_runtime_dependency 'racc'
 
   s.add_development_dependency 'rexical'
   s.add_development_dependency 'awesome_print'
